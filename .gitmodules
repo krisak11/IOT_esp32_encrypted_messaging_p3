@@ -19,3 +19,9 @@
 [submodule "components/device-table"]
 	path = components/device-table
 	url = https://iot.rhi.hi.is/git/TOL103M/device-table.git
+[submodule "components/crypt"]
+	path = components/crypt
+	url = https://iot.rhi.hi.is/git/TOL103M/crypt.git
+[submodule "components/command"]
+	path = components/command
+	url = https://iot.rhi.hi.is/git/TOL103M/command.git

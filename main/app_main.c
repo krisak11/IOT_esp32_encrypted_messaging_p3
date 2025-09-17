@@ -11,6 +11,8 @@
 #include <cli.h>
 #include <chat.h>
 #include <ping.h>
+#include <crypt.h>
+#include <command.h>
 
 // Usage: help_command(NULL)
 // Pre:   None, this command takes no arguments.
@@ -22,7 +24,9 @@ const command_t commands[] = {
 	{"tell",    "/tell ID MSG or @ID MSG      Send a message to a specific node", tell_command},
 	{"ping",    "/ping ID                     Check if a node is online", ping_command},
 	{"date",    "/date                        Print the current time", date_command},
+	{"setkey",  "/setkey [KEY|0|1]            Set the encryption key to use.  If no key is provided encryption is disabled", crypt_setkey_command},
 	{"id",      "/id                          Print your ID", id_command},
+	{"testenc", "/testenc [STR]               Run STR through a encrypt/decrypt cycle to verify that encryption works", crypt_test_command},
 	{"help",    "/help                        Print this help", help_command}
 };
 
@@ -59,10 +63,11 @@ void app_main(void)
 	init_serial_service();
 
 	// Initialize the LowNet services.
-	lownet_init();
+	lownet_init(crypt_encrypt, crypt_decrypt);
 
 	chat_init();
 	ping_init();
+	command_init();
 
 	while (true) {
 		memset(msg_in, 0, MSG_BUFFER_LENGTH);
