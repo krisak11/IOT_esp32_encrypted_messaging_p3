@@ -1,0 +1,68 @@
+.
+├── CMakeLists.txt
+├── components
+│   ├── chat
+│   │   ├── CMakeLists.txt
+│   │   ├── chat.c
+│   │   └── include
+│   │       └── chat.h
+│   ├── cli
+│   │   ├── CMakeLists.txt
+│   │   ├── cli.c
+│   │   └── include
+│   │       └── cli.h
+│   ├── command
+│   │   ├── CMakeLists.txt
+│   │   ├── command.c
+│   │   ├── command_cli.c
+│   │   ├── crypto_glue.c
+│   │   └── include
+│   │       ├── command.h
+│   │       ├── command_cli.h
+│   │       └── crypto_glue.h
+│   ├── crypt
+│   │   ├── CMakeLists.txt
+│   │   ├── crypt.c
+│   │   └── include
+│   │       └── crypt.h
+│   ├── device-table
+│   │   ├── CMakeLists.txt
+│   │   ├── device-table.c
+│   │   └── include
+│   │       └── device-table.h
+│   ├── lownet
+│   │   ├── CMakeLists.txt
+│   │   ├── include
+│   │   │   ├── lownet.h
+│   │   │   └── lownet_crypt.h
+│   │   ├── lownet.c
+│   │   └── lownet_crypt.c
+│   ├── ping
+│   │   ├── CMakeLists.txt
+│   │   ├── app_ping.c
+│   │   ├── include
+│   │   │   └── ping.h
+│   │   └── ping.c
+│   ├── serial
+│   │   ├── CMakeLists.txt
+│   │   ├── include
+│   │   │   └── serial_io.h
+│   │   └── serial_io.c
+│   ├── testcases
+│   │   ├── CMakeLists.txt
+│   │   ├── include
+│   │   │   └── testcases.h
+│   │   ├── testcases.c
+│   │   └── testcases.readme
+│   └── utility
+│       ├── CMakeLists.txt
+│       ├── include
+│       │   └── utility.h
+│       └── utility.c
+├── main
+│   ├── CMakeLists.txt
+│   └── app_main.c
+├── project_structure.txt
+└── sdkconfig
+
+23 directories, 43 files

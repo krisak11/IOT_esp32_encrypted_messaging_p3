@@ -13,6 +13,8 @@
 #include <ping.h>
 #include <crypt.h>
 #include <command.h>
+#include <command_cli.h> 
+#include <testcases.h>
 
 // Usage: help_command(NULL)
 // Pre:   None, this command takes no arguments.
@@ -27,6 +29,7 @@ const command_t commands[] = {
 	{"setkey",  "/setkey [KEY|0|1]            Set the encryption key to use.  If no key is provided encryption is disabled", crypt_setkey_command},
 	{"id",      "/id                          Print your ID", id_command},
 	{"testenc", "/testenc [STR]               Run STR through a encrypt/decrypt cycle to verify that encryption works", crypt_test_command},
+	{"testsig", "/testsig                     Run SHA-256 and RSA signature self-test", testsig_command},
 	{"help",    "/help                        Print this help", help_command}
 };
 
